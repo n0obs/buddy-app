@@ -557,8 +557,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       MediaQuery.sizeOf(context).width * 0.95,
                                   height: 60.0,
                                   decoration: BoxDecoration(
-                                    color:
-                                        FlutterFlowTheme.of(context).alternate,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     borderRadius: BorderRadius.circular(12.0),
                                     border: Border.all(
                                       color:
