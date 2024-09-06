@@ -71,6 +71,7 @@ abstract class FlutterFlowTheme {
   late Color bordaroxocinza;
   late Color cinzachat;
   late Color anxiety;
+  late Color customColor1;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -183,6 +184,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color bordaroxocinza = const Color(0xFF9E9FE2);
   late Color cinzachat = const Color(0xFFEFF1F5);
   late Color anxiety = const Color(0xFF9E9FE2);
+  late Color customColor1 = const Color(0xFFD7D7D7);
 }
 
 abstract class Typography {
@@ -584,6 +586,7 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color bordaroxocinza = const Color(0xFF191919);
   late Color cinzachat = const Color(0xFF22282F);
   late Color anxiety = const Color(0xFF9E9FE2);
+  late Color customColor1 = const Color(0xFF1A1F24);
 }
 
 extension TextStyleHelper on TextStyle {

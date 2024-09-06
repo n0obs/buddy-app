@@ -198,10 +198,6 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                 ),
                               ),
                             ),
-                            const Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [],
-                            ),
                           ],
                         ),
                       ),
