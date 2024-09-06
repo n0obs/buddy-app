@@ -4,7 +4,10 @@ Este projeto utiliza a API do ChatGPT para funcionalidades de conversação. Par
 
 ## ⚠⚠ UTILIZE A CHAVE APRESENTADA NO PDF DE ENTREGA, a mesma não pode subir aqui sem que a OpenAI bloqueia (agradecemos a compreensão). ⚠⚠
 
-
+## Segurança do buddy:
+→ Toda conversa com o buddy não é salva, ela não persiste nos nossos
+bancos de dados, então não há como ter dado sensível vazado, fica tudo
+sobre responsabilidade da OpenAI � 
 
 ### 1. Localize o arquivo `api_calls.dart`:
 - Caminho do arquivo: `lib/backend/api_requests/api_calls.dart`
