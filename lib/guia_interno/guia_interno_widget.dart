@@ -51,13 +51,13 @@ class _GuiaInternoWidgetState extends State<GuiaInternoWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30,
-            borderWidth: 1,
-            buttonSize: 60,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30,
+              size: 30.0,
             ),
             onPressed: () async {
               context.pop();
@@ -68,19 +68,19 @@ class _GuiaInternoWidgetState extends State<GuiaInternoWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Montserrat',
                   color: Colors.white,
-                  fontSize: 22,
+                  fontSize: 22.0,
                   letterSpacing: 0.0,
                   useGoogleFonts: GoogleFonts.asMap().containsKey('Montserrat'),
                 ),
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 16),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -100,7 +100,7 @@ class _GuiaInternoWidgetState extends State<GuiaInternoWidget> {
                               fontFamily: FlutterFlowTheme.of(context)
                                   .headlineLargeFamily,
                               color: FlutterFlowTheme.of(context).primaryText,
-                              fontSize: 22,
+                              fontSize: 22.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
@@ -111,7 +111,8 @@ class _GuiaInternoWidgetState extends State<GuiaInternoWidget> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 8),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 8.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -143,7 +144,8 @@ class _GuiaInternoWidgetState extends State<GuiaInternoWidget> {
                     scrollDirection: Axis.vertical,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 8),
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 8.0),
                         child: Text(
                           valueOrDefault<String>(
                             widget.guiainterna?.textcomplete,

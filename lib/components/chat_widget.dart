@@ -45,32 +45,32 @@ class _ChatWidgetState extends State<ChatWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.sizeOf(context).width,
-      height: MediaQuery.sizeOf(context).height * 1,
+      width: MediaQuery.sizeOf(context).width * 1.0,
+      height: MediaQuery.sizeOf(context).height * 1.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(12.0),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.sizeOf(context).width,
-            height: 150,
+            width: MediaQuery.sizeOf(context).width * 1.0,
+            height: 150.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primaryBackground,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.0),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                   child: Container(
-                    width: 50,
-                    height: 50,
+                    width: 50.0,
+                    height: 50.0,
                     clipBehavior: Clip.antiAlias,
                     decoration: const BoxDecoration(
                       shape: BoxShape.circle,
@@ -83,10 +83,11 @@ class _ChatWidgetState extends State<ChatWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                     child: Container(
-                      width: 100,
-                      height: 100,
+                      width: 100.0,
+                      height: 100.0,
                       decoration: const BoxDecoration(),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -100,7 +101,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                 .override(
                                   fontFamily: 'Sora',
                                   color: FlutterFlowTheme.of(context).secondary,
-                                  fontSize: 22,
+                                  fontSize: 22.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts:
@@ -114,7 +115,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                 .override(
                                   fontFamily: 'Sora',
                                   color: FlutterFlowTheme.of(context).tertiary,
-                                  fontSize: 16,
+                                  fontSize: 16.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts:
                                       GoogleFonts.asMap().containsKey('Sora'),
@@ -126,10 +127,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
-                    width: 50,
-                    height: 50,
+                    width: 50.0,
+                    height: 50.0,
                     decoration: const BoxDecoration(),
                     child: InkWell(
                       splashColor: Colors.transparent,
@@ -142,7 +143,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                       child: Icon(
                         Icons.close_outlined,
                         color: FlutterFlowTheme.of(context).tertiary,
-                        size: 35,
+                        size: 35.0,
                       ),
                     ),
                   ),
@@ -152,8 +153,8 @@ class _ChatWidgetState extends State<ChatWidget> {
           ),
           Expanded(
             child: Container(
-              width: MediaQuery.sizeOf(context).width,
-              height: 100,
+              width: MediaQuery.sizeOf(context).width * 1.0,
+              height: 100.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
@@ -170,7 +171,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                       final historicoConversaChatItem =
                           historicoConversaChat[historicoConversaChatIndex];
                       return Container(
-                        width: 100,
+                        width: 100.0,
                         decoration: const BoxDecoration(),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -180,14 +181,14 @@ class _ChatWidgetState extends State<ChatWidget> {
                             if (historicoConversaChatItem.role == 'assistant')
                               Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
-                                    16, 0, 16, 0),
+                                    16.0, 0.0, 16.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      width: 50,
-                                      height: 50,
+                                      width: 50.0,
+                                      height: 50.0,
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
@@ -207,7 +208,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            8, 0, 0, 0),
+                                            8.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           historicoConversaChatItem.content,
                                           textAlign: TextAlign.start,
@@ -233,8 +234,8 @@ class _ChatWidgetState extends State<ChatWidget> {
                               ),
                             if (historicoConversaChatItem.role == 'user')
                               Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 8, 0, 8),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 0.0, 8.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.end,
@@ -242,21 +243,21 @@ class _ChatWidgetState extends State<ChatWidget> {
                                   children: [
                                     Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          16, 0, 16, 0),
+                                          16.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
                                           borderRadius:
-                                              BorderRadius.circular(12),
+                                              BorderRadius.circular(12.0),
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(-1, 0),
+                                              const AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    8, 8, 8, 8),
+                                                    8.0, 8.0, 8.0, 8.0),
                                             child: Text(
                                               historicoConversaChatItem.content,
                                               textAlign: TextAlign.end,
@@ -294,27 +295,28 @@ class _ChatWidgetState extends State<ChatWidget> {
             ),
           ),
           Container(
-            width: MediaQuery.sizeOf(context).width,
-            height: 100,
+            width: MediaQuery.sizeOf(context).width * 1.0,
+            height: 100.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).primaryBackground,
               borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(12),
-                bottomRight: Radius.circular(12),
-                topLeft: Radius.circular(0),
-                topRight: Radius.circular(0),
+                bottomLeft: Radius.circular(12.0),
+                bottomRight: Radius.circular(12.0),
+                topLeft: Radius.circular(0.0),
+                topRight: Radius.circular(0.0),
               ),
             ),
-            alignment: const AlignmentDirectional(0, 0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 8, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.facaPerguntaFieldTextController,
                         focusNode: _model.facaPerguntaFieldFocusNode,
@@ -421,13 +423,15 @@ class _ChatWidgetState extends State<ChatWidget> {
                     icon: Icon(
                       Icons.send_rounded,
                       color: FlutterFlowTheme.of(context).primaryBackground,
-                      size: 30,
+                      size: 30.0,
                     ),
                     options: FFButtonOptions(
-                      width: 50,
-                      height: 50,
-                      padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      width: 50.0,
+                      height: 50.0,
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -439,12 +443,12 @@ class _ChatWidgetState extends State<ChatWidget> {
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
-                      elevation: 3,
+                      elevation: 3.0,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
                 ],

@@ -48,13 +48,13 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+          borderRadius: 30.0,
+          borderWidth: 1.0,
+          buttonSize: 60.0,
           icon: Icon(
             Icons.arrow_back_rounded,
             color: FlutterFlowTheme.of(context).primaryText,
-            size: 30,
+            size: 30.0,
           ),
           onPressed: () async {
             context.safePop();
@@ -62,14 +62,14 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
         ),
         actions: const [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: Align(
-        alignment: const AlignmentDirectional(0, -1),
+        alignment: const AlignmentDirectional(0.0, -1.0),
         child: Container(
           width: double.infinity,
           constraints: const BoxConstraints(
-            maxWidth: 570,
+            maxWidth: 570.0,
           ),
           decoration: const BoxDecoration(),
           child: Column(
@@ -83,7 +83,7 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                 tablet: false,
               ))
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 8),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -96,15 +96,17 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 12.0, 0.0, 12.0),
                           child: Icon(
                             Icons.arrow_back_rounded,
                             color: FlutterFlowTheme.of(context).primaryText,
-                            size: 24,
+                            size: 24.0,
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(12, 0, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              12.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Back',
                             style: FlutterFlowTheme.of(context)
@@ -124,7 +126,7 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                   ),
                 ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                 child: Text(
                   'Esqueceu a senha?',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -136,7 +138,7 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 8, 16, 16),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 16.0),
                 child: Text(
                   'Iremos lhe enviar um e-mail com um link para redefinir sua senha, digite o e-mail associado à sua conta abaixo.',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -149,7 +151,7 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: SizedBox(
                   width: double.infinity,
                   child: TextFormField(
@@ -180,36 +182,36 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).alternate,
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).primary,
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       errorBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).error,
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       focusedErrorBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: FlutterFlowTheme.of(context).error,
-                          width: 2,
+                          width: 2.0,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                       filled: true,
                       fillColor:
                           FlutterFlowTheme.of(context).secondaryBackground,
-                      contentPadding:
-                          const EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
+                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                          24.0, 24.0, 20.0, 24.0),
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily:
@@ -227,9 +229,10 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0, 0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       if (_model.emailAddressTextController.text.isEmpty) {
@@ -250,9 +253,11 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                     text: 'Enviar Link',
                     options: FFButtonOptions(
                       width: double.infinity,
-                      height: 50,
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      height: 50.0,
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -262,12 +267,12 @@ class _EsqueceuSenhaWidgetState extends State<EsqueceuSenhaWidget> {
                             useGoogleFonts:
                                 GoogleFonts.asMap().containsKey('Montserrat'),
                           ),
-                      elevation: 3,
+                      elevation: 3.0,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                   ),
                 ),

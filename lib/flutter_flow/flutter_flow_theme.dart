@@ -228,104 +228,104 @@ class MobileTypography extends Typography {
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
-        fontSize: 57,
+        fontSize: 57.0,
       );
   String get displayMediumFamily => 'Urbanist';
   TextStyle get displayMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 45,
+        fontSize: 45.0,
       );
   String get displaySmallFamily => 'Urbanist';
   TextStyle get displaySmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 36,
+        fontSize: 36.0,
       );
   String get headlineLargeFamily => 'Urbanist';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 32,
+        fontSize: 32.0,
       );
   String get headlineMediumFamily => 'Urbanist';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 28,
+        fontSize: 28.0,
       );
   String get headlineSmallFamily => 'Urbanist';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 20,
+        fontSize: 20.0,
       );
   String get titleLargeFamily => 'Manrope';
   TextStyle get titleLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 22,
+        fontSize: 22.0,
       );
   String get titleMediumFamily => 'Manrope';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 18,
+        fontSize: 18.0,
       );
   String get titleSmallFamily => 'Manrope';
   TextStyle get titleSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get labelLargeFamily => 'Manrope';
   TextStyle get labelLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get labelMediumFamily => 'Manrope';
   TextStyle get labelMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 12,
+        fontSize: 12.0,
       );
   String get labelSmallFamily => 'Manrope';
   TextStyle get labelSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 11,
+        fontSize: 11.0,
       );
   String get bodyLargeFamily => 'Manrope';
   TextStyle get bodyLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Manrope';
   TextStyle get bodyMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get bodySmallFamily => 'Manrope';
   TextStyle get bodySmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 12,
+        fontSize: 12.0,
       );
 }
 
@@ -339,104 +339,104 @@ class TabletTypography extends Typography {
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
-        fontSize: 57,
+        fontSize: 57.0,
       );
   String get displayMediumFamily => 'Urbanist';
   TextStyle get displayMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 45,
+        fontSize: 45.0,
       );
   String get displaySmallFamily => 'Urbanist';
   TextStyle get displaySmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 36,
+        fontSize: 36.0,
       );
   String get headlineLargeFamily => 'Urbanist';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 32,
+        fontSize: 32.0,
       );
   String get headlineMediumFamily => 'Urbanist';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 28,
+        fontSize: 28.0,
       );
   String get headlineSmallFamily => 'Urbanist';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 20,
+        fontSize: 20.0,
       );
   String get titleLargeFamily => 'Manrope';
   TextStyle get titleLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 22,
+        fontSize: 22.0,
       );
   String get titleMediumFamily => 'Manrope';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 18,
+        fontSize: 18.0,
       );
   String get titleSmallFamily => 'Manrope';
   TextStyle get titleSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get labelLargeFamily => 'Manrope';
   TextStyle get labelLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get labelMediumFamily => 'Manrope';
   TextStyle get labelMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 12,
+        fontSize: 12.0,
       );
   String get labelSmallFamily => 'Manrope';
   TextStyle get labelSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 11,
+        fontSize: 11.0,
       );
   String get bodyLargeFamily => 'Manrope';
   TextStyle get bodyLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Manrope';
   TextStyle get bodyMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get bodySmallFamily => 'Manrope';
   TextStyle get bodySmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 12,
+        fontSize: 12.0,
       );
 }
 
@@ -450,104 +450,104 @@ class DesktopTypography extends Typography {
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
-        fontSize: 57,
+        fontSize: 57.0,
       );
   String get displayMediumFamily => 'Urbanist';
   TextStyle get displayMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 45,
+        fontSize: 45.0,
       );
   String get displaySmallFamily => 'Urbanist';
   TextStyle get displaySmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
-        fontSize: 36,
+        fontSize: 36.0,
       );
   String get headlineLargeFamily => 'Urbanist';
   TextStyle get headlineLarge => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 32,
+        fontSize: 32.0,
       );
   String get headlineMediumFamily => 'Urbanist';
   TextStyle get headlineMedium => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 28,
+        fontSize: 28.0,
       );
   String get headlineSmallFamily => 'Urbanist';
   TextStyle get headlineSmall => GoogleFonts.getFont(
         'Urbanist',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 20,
+        fontSize: 20.0,
       );
   String get titleLargeFamily => 'Manrope';
   TextStyle get titleLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 22,
+        fontSize: 22.0,
       );
   String get titleMediumFamily => 'Manrope';
   TextStyle get titleMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 18,
+        fontSize: 18.0,
       );
   String get titleSmallFamily => 'Manrope';
   TextStyle get titleSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.info,
         fontWeight: FontWeight.w500,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get labelLargeFamily => 'Manrope';
   TextStyle get labelLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get labelMediumFamily => 'Manrope';
   TextStyle get labelMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 12,
+        fontSize: 12.0,
       );
   String get labelSmallFamily => 'Manrope';
   TextStyle get labelSmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.secondaryText,
         fontWeight: FontWeight.w500,
-        fontSize: 11,
+        fontSize: 11.0,
       );
   String get bodyLargeFamily => 'Manrope';
   TextStyle get bodyLarge => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
-        fontSize: 16,
+        fontSize: 16.0,
       );
   String get bodyMediumFamily => 'Manrope';
   TextStyle get bodyMedium => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 14,
+        fontSize: 14.0,
       );
   String get bodySmallFamily => 'Manrope';
   TextStyle get bodySmall => GoogleFonts.getFont(
         'Manrope',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
-        fontSize: 12,
+        fontSize: 12.0,
       );
 }
 

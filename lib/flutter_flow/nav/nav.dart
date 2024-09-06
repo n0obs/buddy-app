@@ -356,8 +356,8 @@ class FFRoute {
                   child: Center(
                     child: Image.asset(
                       'assets/images/buddy_carrossel.png',
-                      width: MediaQuery.sizeOf(context).width,
-                      height: MediaQuery.sizeOf(context).height * 1,
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: MediaQuery.sizeOf(context).height * 1.0,
                       fit: BoxFit.scaleDown,
                     ),
                   ),

@@ -93,12 +93,12 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
         automaticallyImplyLeading: false,
         leading: FlutterFlowIconButton(
           borderColor: Colors.transparent,
-          borderRadius: 30,
-          buttonSize: 48,
+          borderRadius: 30.0,
+          buttonSize: 48.0,
           icon: Icon(
             Icons.arrow_back_rounded,
             color: FlutterFlowTheme.of(context).info,
-            size: 25,
+            size: 25.0,
           ),
           onPressed: () async {
             context.safePop();
@@ -115,7 +115,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
         ),
         actions: const [],
         centerTitle: false,
-        elevation: 0,
+        elevation: 0.0,
       ),
       body: SafeArea(
         top: true,
@@ -134,25 +134,26 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                         color: FlutterFlowTheme.of(context).primary,
                       ),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 24),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 24.0, 16.0, 24.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context).accent4,
                             boxShadow: const [
                               BoxShadow(
-                                blurRadius: 8,
+                                blurRadius: 8.0,
                                 color: Color(0x36000000),
                                 offset: Offset(
                                   0.0,
-                                  4,
+                                  4.0,
                                 ),
                               )
                             ],
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(12),
+                            padding: const EdgeInsets.all(12.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -164,22 +165,23 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       color:
                                           FlutterFlowTheme.of(context).tertiary,
                                       shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(8),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8.0),
                                         child: Icon(
                                           Icons.phone_sharp,
                                           color:
                                               FlutterFlowTheme.of(context).info,
-                                          size: 24,
+                                          size: 24.0,
                                         ),
                                       ),
                                     ),
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            8, 0, 0, 0),
+                                            8.0, 0.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -187,7 +189,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                           children: [
                                             Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(8, 0, 0, 0),
+                                                  .fromSTEB(8.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 'Coloque seu telefone',
                                                 style:
@@ -210,7 +212,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                             ),
                                             Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(8, 4, 12, 0),
+                                                  .fromSTEB(
+                                                      8.0, 4.0, 12.0, 0.0),
                                               child: Text(
                                                 'Deixe sua conta mais segura, conectando seu numero.',
                                                 style:
@@ -221,7 +224,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                               FlutterFlowTheme.of(
                                                                       context)
                                                                   .bodySmallFamily,
-                                                          fontSize: 12,
+                                                          fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: GoogleFonts
                                                                   .asMap()
@@ -244,7 +247,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0, 16, 0, 0),
+                                            0.0, 16.0, 0.0, 0.0),
                                         child: TextFormField(
                                           controller:
                                               _model.telefoneTextController,
@@ -272,30 +275,30 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primary,
-                                                width: 2,
+                                                width: 2.0,
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(8),
+                                                  BorderRadius.circular(8.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primary,
-                                                width: 2,
+                                                width: 2.0,
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(8),
+                                                  BorderRadius.circular(8.0),
                                             ),
                                             errorBorder: OutlineInputBorder(
                                               borderSide: BorderSide(
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .error,
-                                                width: 2,
+                                                width: 2.0,
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(8),
+                                                  BorderRadius.circular(8.0),
                                             ),
                                             focusedErrorBorder:
                                                 OutlineInputBorder(
@@ -303,10 +306,10 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .error,
-                                                width: 2,
+                                                width: 2.0,
                                               ),
                                               borderRadius:
-                                                  BorderRadius.circular(8),
+                                                  BorderRadius.circular(8.0),
                                             ),
                                             filled: true,
                                             fillColor:
@@ -348,7 +351,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 24, 16, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -368,7 +371,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -383,8 +386,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 16.0, 0.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.nomefieldTextController,
                                   focusNode: _model.nomefieldFocusNode,
@@ -413,7 +416,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                   .labelMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          fontSize: 14,
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -424,33 +427,33 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
@@ -483,8 +486,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 16.0, 0.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.emailfieldTextController,
                                   focusNode: _model.emailfieldFocusNode,
@@ -513,7 +516,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                   .labelMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          fontSize: 14,
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -524,33 +527,33 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
@@ -583,8 +586,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 16.0, 0.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.cidadefieldTextController,
                                   focusNode: _model.cidadefieldFocusNode,
@@ -613,7 +616,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                   .labelMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          fontSize: 14,
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -624,33 +627,33 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
@@ -683,8 +686,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 16.0, 0.0, 0.0),
                                 child: TextFormField(
                                   controller:
                                       _model.enderecofieldTextController,
@@ -714,7 +717,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                   .labelMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          fontSize: 14,
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -725,33 +728,33 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
@@ -784,8 +787,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 16.0, 0.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.cPFieldTextController,
                                   focusNode: _model.cPFieldFocusNode,
@@ -814,7 +817,7 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                                   .labelMediumFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .tertiary,
-                                          fontSize: 14,
+                                          fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -825,33 +828,33 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color:
                                             FlutterFlowTheme.of(context).error,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(8),
+                                      borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
@@ -899,8 +902,8 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                   if (!snapshot.hasData) {
                     return Center(
                       child: SizedBox(
-                        width: 50,
-                        height: 50,
+                        width: 50.0,
+                        height: 50.0,
                         child: CircularProgressIndicator(
                           valueColor: AlwaysStoppedAnimation<Color>(
                             FlutterFlowTheme.of(context).primary,
@@ -945,10 +948,12 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                     },
                     text: 'Salvar Alteração',
                     options: FFButtonOptions(
-                      width: 270,
-                      height: 50,
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                      width: 270.0,
+                      height: 50.0,
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -960,12 +965,12 @@ class _EditeContaWidgetState extends State<EditeContaWidget> {
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).titleSmallFamily),
                           ),
-                      elevation: 3,
+                      elevation: 3.0,
                       borderSide: const BorderSide(
                         color: Colors.transparent,
-                        width: 1,
+                        width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(12.0),
                     ),
                   );
                 },

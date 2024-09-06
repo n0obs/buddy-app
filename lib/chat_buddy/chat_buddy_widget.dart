@@ -51,8 +51,8 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
             backgroundColor: const Color(0xF2FFFFFF),
             body: Center(
               child: SizedBox(
-                width: 50,
-                height: 50,
+                width: 50.0,
+                height: 50.0,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
                     FlutterFlowTheme.of(context).primary,
@@ -74,8 +74,8 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
             key: scaffoldKey,
             backgroundColor: const Color(0xF2FFFFFF),
             body: Container(
-              width: MediaQuery.sizeOf(context).width,
-              height: MediaQuery.sizeOf(context).height * 1,
+              width: MediaQuery.sizeOf(context).width * 1.0,
+              height: MediaQuery.sizeOf(context).height * 1.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
@@ -84,8 +84,8 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: MediaQuery.sizeOf(context).width,
-                    height: 150,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: 150.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
@@ -95,11 +95,11 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                       children: [
                         Expanded(
                           child: Padding(
-                            padding:
-                                const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 0.0, 0.0),
                             child: Container(
-                              width: 100,
-                              height: 100,
+                              width: 100.0,
+                              height: 100.0,
                               decoration: const BoxDecoration(),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -132,7 +132,7 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                                                   .headlineSmallFamily,
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
-                                          fontSize: 18,
+                                          fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
                                               .containsKey(
@@ -146,10 +146,11 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
                           child: Container(
-                            width: 50,
-                            height: 80,
+                            width: 50.0,
+                            height: 80.0,
                             decoration: const BoxDecoration(),
                           ),
                         ),
@@ -158,8 +159,8 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                   ),
                   Expanded(
                     child: Container(
-                      width: MediaQuery.sizeOf(context).width,
-                      height: 100,
+                      width: MediaQuery.sizeOf(context).width * 1.0,
+                      height: 100.0,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).primaryBackground,
                         image: DecorationImage(
@@ -172,14 +173,15 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                     ),
                   ),
                   Container(
-                    width: MediaQuery.sizeOf(context).width,
-                    height: 100,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: 100.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
-                    alignment: const AlignmentDirectional(0, 0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -208,8 +210,8 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                               ).then((value) => safeSetState(() {}));
                             },
                             child: Container(
-                              width: 80,
-                              height: 80,
+                              width: 80.0,
+                              height: 80.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).anxiety,
                                 shape: BoxShape.circle,

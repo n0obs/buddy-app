@@ -55,7 +55,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                     children: [
                       Expanded(
                         child: Align(
-                          alignment: const AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: GradientText(
                             'MENU',
                             textAlign: TextAlign.start,
@@ -66,7 +66,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                                       .bodyMediumFamily,
                                   color: FlutterFlowTheme.of(context)
                                       .blacktopurple,
-                                  fontSize: 32,
+                                  fontSize: 32.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
                                   useGoogleFonts: GoogleFonts.asMap()
@@ -82,9 +82,10 @@ class _MenuWidgetState extends State<MenuWidget> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius: BorderRadius.circular(8.0),
                       child: Image.asset(
                         'assets/images/idoso_menu.png',
                         width: MediaQuery.sizeOf(context).width * 0.3,
@@ -93,12 +94,13 @@ class _MenuWidgetState extends State<MenuWidget> {
                     ),
                   ),
                   Divider(
-                    height: 50,
-                    thickness: 1,
+                    height: 50.0,
+                    thickness: 1.0,
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -112,19 +114,19 @@ class _MenuWidgetState extends State<MenuWidget> {
                         height: MediaQuery.sizeOf(context).height * 0.1,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).cinzachat,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                           border: Border.all(
                             color: FlutterFlowTheme.of(context).azulroxo,
                           ),
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0, 0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: SizedBox(
-                            width: MediaQuery.sizeOf(context).width,
+                            width: MediaQuery.sizeOf(context).width * 1.0,
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0, 0.4),
+                                  alignment: const AlignmentDirectional(0.0, 0.4),
                                   child: Text(
                                     'BUDDY',
                                     style: FlutterFlowTheme.of(context)
@@ -133,7 +135,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                                           fontFamily: 'Buddy',
                                           color: FlutterFlowTheme.of(context)
                                               .blacktopurple,
-                                          fontSize: 18,
+                                          fontSize: 18.0,
                                           letterSpacing: 0.0,
                                           fontWeight: FontWeight.w500,
                                           useGoogleFonts: GoogleFonts.asMap()
@@ -142,15 +144,15 @@ class _MenuWidgetState extends State<MenuWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0, -0.6),
+                                  alignment: const AlignmentDirectional(0.0, -0.6),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        0, 0, 0, 10),
+                                        0.0, 0.0, 0.0, 10.0),
                                     child: Icon(
                                       Icons.chat,
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      size: 24,
+                                      size: 24.0,
                                     ),
                                   ),
                                 ),
@@ -162,7 +164,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -176,7 +179,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         height: MediaQuery.sizeOf(context).height * 0.1,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).cinzachat,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                           border: Border.all(
                             color: FlutterFlowTheme.of(context).azulroxo,
                           ),
@@ -184,7 +187,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0, 0.4),
+                              alignment: const AlignmentDirectional(0.0, 0.4),
                               child: Text(
                                 'SAÚDE',
                                 style: FlutterFlowTheme.of(context)
@@ -193,7 +196,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                                       fontFamily: 'Buddy',
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      fontSize: 18,
+                                      fontSize: 18.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
@@ -202,15 +205,15 @@ class _MenuWidgetState extends State<MenuWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0, -0.6),
+                              alignment: const AlignmentDirectional(0.0, -0.6),
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
                                 child: Icon(
                                   Icons.emoji_people,
                                   color: FlutterFlowTheme.of(context)
                                       .blacktopurple,
-                                  size: 24,
+                                  size: 24.0,
                                 ),
                               ),
                             ),
@@ -220,7 +223,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -234,7 +238,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         height: MediaQuery.sizeOf(context).height * 0.1,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).cinzachat,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                           border: Border.all(
                             color: FlutterFlowTheme.of(context).azulroxo,
                           ),
@@ -242,7 +246,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0, 0.4),
+                              alignment: const AlignmentDirectional(0.0, 0.4),
                               child: Text(
                                 'ROTINA',
                                 style: FlutterFlowTheme.of(context)
@@ -251,7 +255,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                                       fontFamily: 'Buddy',
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      fontSize: 18,
+                                      fontSize: 18.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
@@ -260,15 +264,15 @@ class _MenuWidgetState extends State<MenuWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0, -0.6),
+                              alignment: const AlignmentDirectional(0.0, -0.6),
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
                                 child: Icon(
                                   Icons.calendar_month,
                                   color: FlutterFlowTheme.of(context)
                                       .blacktopurple,
-                                  size: 24,
+                                  size: 24.0,
                                 ),
                               ),
                             ),
@@ -278,7 +282,8 @@ class _MenuWidgetState extends State<MenuWidget> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 20),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -292,7 +297,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         height: MediaQuery.sizeOf(context).height * 0.1,
                         decoration: BoxDecoration(
                           color: FlutterFlowTheme.of(context).cinzachat,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(16.0),
                           border: Border.all(
                             color: FlutterFlowTheme.of(context).azulroxo,
                           ),
@@ -300,7 +305,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                         child: Stack(
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0, 0.4),
+                              alignment: const AlignmentDirectional(0.0, 0.4),
                               child: Text(
                                 'GUIA',
                                 style: FlutterFlowTheme.of(context)
@@ -309,7 +314,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                                       fontFamily: 'Buddy',
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      fontSize: 18,
+                                      fontSize: 18.0,
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
@@ -318,15 +323,15 @@ class _MenuWidgetState extends State<MenuWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0, -0.6),
+                              alignment: const AlignmentDirectional(0.0, -0.6),
                               child: Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 10.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.solidNewspaper,
                                   color: FlutterFlowTheme.of(context)
                                       .blacktopurple,
-                                  size: 24,
+                                  size: 24.0,
                                 ),
                               ),
                             ),
@@ -338,9 +343,9 @@ class _MenuWidgetState extends State<MenuWidget> {
                 ],
               ),
               Align(
-                alignment: const AlignmentDirectional(1, -0.97),
+                alignment: const AlignmentDirectional(1.0, -0.97),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 32, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 32.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -352,7 +357,7 @@ class _MenuWidgetState extends State<MenuWidget> {
                     child: const FaIcon(
                       FontAwesomeIcons.cog,
                       color: Color(0xFFF98853),
-                      size: 24,
+                      size: 24.0,
                     ),
                   ),
                 ),

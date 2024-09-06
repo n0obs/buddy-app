@@ -46,7 +46,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsets.all(32),
+            padding: const EdgeInsets.all(32.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -54,8 +54,8 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
               children: [
                 Expanded(
                   child: Container(
-                    width: MediaQuery.sizeOf(context).width,
-                    height: MediaQuery.sizeOf(context).height * 1,
+                    width: MediaQuery.sizeOf(context).width * 1.0,
+                    height: MediaQuery.sizeOf(context).height * 1.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
@@ -76,18 +76,19 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: const AlignmentDirectional(0, 0),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 16, 0, 16),
+                                                  0.0, 16.0, 0.0, 16.0),
                                           child: ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'assets/images/idoso_bemvindo.png',
-                                              width: 300,
-                                              height: 200,
+                                              width: 300.0,
+                                              height: 200.0,
                                               fit: BoxFit.scaleDown,
                                             ),
                                           ),
@@ -110,7 +111,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .primary,
-                                                      fontSize: 24,
+                                                      fontSize: 24.0,
                                                       letterSpacing: 0.0,
                                                       fontWeight:
                                                           FontWeight.w600,
@@ -138,7 +139,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Montserrat',
-                                                  fontSize: 24,
+                                                  fontSize: 24.0,
                                                   letterSpacing: 0.0,
                                                   fontWeight: FontWeight.w600,
                                                   useGoogleFonts:
@@ -152,17 +153,17 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1, -0.8),
+                                    alignment: const AlignmentDirectional(-1.0, -0.8),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          25, 0, 0, 0),
+                                          25.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Saudações...',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Montserrat',
-                                              fontSize: 24,
+                                              fontSize: 24.0,
                                               letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                               useGoogleFonts:
@@ -182,14 +183,15 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: const AlignmentDirectional(0, 0),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 16, 0, 16),
+                                                  0.0, 16.0, 0.0, 16.0),
                                           child: ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'assets/images/buddy_carrossel.png',
                                               width: MediaQuery.sizeOf(context)
@@ -218,7 +220,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primary,
-                                                    fontSize: 22,
+                                                    fontSize: 22.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
@@ -245,7 +247,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 22,
+                                                fontSize: 22.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts:
@@ -258,10 +260,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1, -0.8),
+                                    alignment: const AlignmentDirectional(-1.0, -0.8),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          25, 0, 0, 0),
+                                          25.0, 0.0, 0.0, 0.0),
                                       child: RichText(
                                         textScaler:
                                             MediaQuery.of(context).textScaler,
@@ -274,7 +276,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Montserrat',
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
@@ -296,7 +298,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 24,
+                                                fontSize: 24.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts:
@@ -317,18 +319,19 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: const AlignmentDirectional(0, 0),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 16, 0, 16),
+                                                  0.0, 16.0, 0.0, 16.0),
                                           child: ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'assets/images/yoga_carrossel.png',
-                                              width: 300,
-                                              height: 200,
+                                              width: 300.0,
+                                              height: 200.0,
                                               fit: BoxFit.scaleDown,
                                             ),
                                           ),
@@ -349,7 +352,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primary,
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
@@ -375,7 +378,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 24,
+                                                fontSize: 24.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts:
@@ -388,10 +391,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1, -0.8),
+                                    alignment: const AlignmentDirectional(-1.0, -0.8),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          25, 0, 0, 0),
+                                          25.0, 0.0, 0.0, 0.0),
                                       child: RichText(
                                         textScaler:
                                             MediaQuery.of(context).textScaler,
@@ -404,7 +407,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Montserrat',
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
@@ -426,7 +429,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 24,
+                                                fontSize: 24.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts:
@@ -447,18 +450,19 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: const AlignmentDirectional(0, 0),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 16, 0, 16),
+                                                  0.0, 16.0, 0.0, 16.0),
                                           child: ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'assets/images/Interface_carrossel.png',
-                                              width: 300,
-                                              height: 200,
+                                              width: 300.0,
+                                              height: 200.0,
                                               fit: BoxFit.scaleDown,
                                             ),
                                           ),
@@ -479,7 +483,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primary,
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
@@ -505,7 +509,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 24,
+                                                fontSize: 24.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts:
@@ -518,10 +522,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1, -0.8),
+                                    alignment: const AlignmentDirectional(-1.0, -0.8),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          25, 0, 0, 0),
+                                          25.0, 0.0, 0.0, 0.0),
                                       child: RichText(
                                         textScaler:
                                             MediaQuery.of(context).textScaler,
@@ -534,7 +538,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Montserrat',
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
@@ -556,7 +560,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 24,
+                                                fontSize: 24.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts:
@@ -577,18 +581,19 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Align(
-                                        alignment: const AlignmentDirectional(0, 0),
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 16, 0, 16),
+                                                  0.0, 16.0, 0.0, 16.0),
                                           child: ClipRRect(
                                             borderRadius:
-                                                BorderRadius.circular(8),
+                                                BorderRadius.circular(8.0),
                                             child: Image.asset(
                                               'assets/images/segurana_carrossel.png',
-                                              width: 300,
-                                              height: 200,
+                                              width: 300.0,
+                                              height: 200.0,
                                               fit: BoxFit.scaleDown,
                                             ),
                                           ),
@@ -610,7 +615,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .primary,
-                                                    fontSize: 23,
+                                                    fontSize: 23.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w600,
                                                     useGoogleFonts:
@@ -636,7 +641,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 23,
+                                                fontSize: 23.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts:
@@ -649,10 +654,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1, -0.8),
+                                    alignment: const AlignmentDirectional(-1.0, -0.8),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          25, 0, 0, 0),
+                                          25.0, 0.0, 0.0, 0.0),
                                       child: RichText(
                                         textScaler:
                                             MediaQuery.of(context).textScaler,
@@ -665,7 +670,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Montserrat',
-                                                    fontSize: 24,
+                                                    fontSize: 24.0,
                                                     letterSpacing: 0.0,
                                                     fontWeight: FontWeight.bold,
                                                     useGoogleFonts:
@@ -687,7 +692,7 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Montserrat',
-                                                fontSize: 23,
+                                                fontSize: 23.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts:
@@ -704,10 +709,10 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                             ],
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0, 1),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(16, 0, 0, 16),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  16.0, 0.0, 0.0, 16.0),
                               child: smooth_page_indicator.SmoothPageIndicator(
                                 controller: _model.pageViewController ??=
                                     PageController(initialPage: 0),
@@ -724,11 +729,11 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                                 },
                                 effect:
                                     smooth_page_indicator.ExpandingDotsEffect(
-                                  expansionFactor: 3,
-                                  spacing: 8,
-                                  radius: 16,
-                                  dotWidth: 16,
-                                  dotHeight: 8,
+                                  expansionFactor: 3.0,
+                                  spacing: 8.0,
+                                  radius: 16.0,
+                                  dotWidth: 16.0,
+                                  dotHeight: 8.0,
                                   dotColor:
                                       FlutterFlowTheme.of(context).accent1,
                                   activeDotColor:
@@ -750,9 +755,11 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                   text: 'Continue',
                   options: FFButtonOptions(
                     width: MediaQuery.sizeOf(context).width * 0.8,
-                    height: 40,
-                    padding: const EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
-                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                    height: 40.0,
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                    iconPadding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily:
@@ -762,12 +769,12 @@ class _BemvindoWidgetState extends State<BemvindoWidget> {
                           useGoogleFonts: GoogleFonts.asMap().containsKey(
                               FlutterFlowTheme.of(context).titleSmallFamily),
                         ),
-                    elevation: 3,
+                    elevation: 3.0,
                     borderSide: const BorderSide(
                       color: Colors.transparent,
-                      width: 1,
+                      width: 1.0,
                     ),
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
                 ),
               ],

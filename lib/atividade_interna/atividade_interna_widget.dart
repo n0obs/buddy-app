@@ -52,13 +52,13 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30,
-            borderWidth: 1,
-            buttonSize: 60,
+            borderRadius: 30.0,
+            borderWidth: 1.0,
+            buttonSize: 60.0,
             icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30,
+              size: 30.0,
             ),
             onPressed: () async {
               context.pop();
@@ -69,14 +69,14 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Montserrat',
                   color: Colors.white,
-                  fontSize: 22,
+                  fontSize: 22.0,
                   letterSpacing: 0.0,
                   useGoogleFonts: GoogleFonts.asMap().containsKey('Montserrat'),
                 ),
           ),
           actions: const [],
           centerTitle: false,
-          elevation: 2,
+          elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
@@ -90,7 +90,7 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Container(
-                      width: MediaQuery.sizeOf(context).width,
+                      width: MediaQuery.sizeOf(context).width * 1.0,
                       height: MediaQuery.sizeOf(context).height * 0.25,
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -104,10 +104,10 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                           ),
                         ),
                         borderRadius: const BorderRadius.only(
-                          bottomLeft: Radius.circular(0),
-                          bottomRight: Radius.circular(0),
-                          topLeft: Radius.circular(16),
-                          topRight: Radius.circular(16),
+                          bottomLeft: Radius.circular(0.0),
+                          bottomRight: Radius.circular(0.0),
+                          topLeft: Radius.circular(16.0),
+                          topRight: Radius.circular(16.0),
                         ),
                         border: Border.all(
                           color: const Color(0xFFAFCBDF),
@@ -120,14 +120,15 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(
-                            padding:
-                                const EdgeInsetsDirectional.fromSTEB(0, 0, 16, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 16.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -139,13 +140,13 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                               child: Icon(
                                 Icons.arrow_circle_left_outlined,
                                 color: FlutterFlowTheme.of(context).primary,
-                                size: 24,
+                                size: 24.0,
                               ),
                             ),
                           ),
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(-1, 0),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: RichText(
                                 textScaler: MediaQuery.of(context).textScaler,
                                 text: TextSpan(
@@ -163,7 +164,7 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                                                     .bodyMediumFamily,
                                             color: FlutterFlowTheme.of(context)
                                                 .tertiary,
-                                            fontSize: 24,
+                                            fontSize: 24.0,
                                             letterSpacing: 0.0,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
@@ -179,7 +180,7 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                                             .languageCode,
                                       ),
                                       style: const TextStyle(
-                                        fontSize: 10,
+                                        fontSize: 10.0,
                                       ),
                                     )
                                   ],
@@ -205,7 +206,8 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 16, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -230,15 +232,16 @@ class _AtividadeInternaWidgetState extends State<AtividadeInternaWidget> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                       child: ListView(
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         scrollDirection: Axis.vertical,
                         children: [
                           Padding(
-                            padding:
-                                const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                16.0, 0.0, 16.0, 0.0),
                             child: Text(
                               valueOrDefault<String>(
                                 widget.atividades?.textcompleted,

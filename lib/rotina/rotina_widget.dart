@@ -63,11 +63,11 @@ class _RotinaWidgetState extends State<RotinaWidget>
             child: Icon(
               Icons.chevron_left_outlined,
               color: FlutterFlowTheme.of(context).tertiary,
-              size: 28,
+              size: 28.0,
             ),
           ),
           title: Align(
-            alignment: const AlignmentDirectional(0, 0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
               'Calendário',
               style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -81,7 +81,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 8, 24, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
               child: badges.Badge(
                 badgeContent: Text(
                   '1',
@@ -97,24 +97,24 @@ class _RotinaWidgetState extends State<RotinaWidget>
                 showBadge: true,
                 shape: badges.BadgeShape.circle,
                 badgeColor: FlutterFlowTheme.of(context).primary,
-                elevation: 4,
-                padding: const EdgeInsets.all(8),
+                elevation: 4.0,
+                padding: const EdgeInsets.all(8.0),
                 position: badges.BadgePosition.topEnd(),
                 animationType: badges.BadgeAnimationType.scale,
                 toAnimate: true,
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(8, 0, 0, 0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                   child: Icon(
                     Icons.chat_bubble_outline_outlined,
                     color: FlutterFlowTheme.of(context).secondaryText,
-                    size: 24,
+                    size: 24.0,
                   ),
                 ),
               ),
             ),
           ],
           centerTitle: false,
-          elevation: 0,
+          elevation: 0.0,
         ),
         body: Stack(
           children: [
@@ -126,7 +126,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                   child: Column(
                     children: [
                       Align(
-                        alignment: const Alignment(0, 0),
+                        alignment: const Alignment(0.0, 0),
                         child: FlutterFlowButtonTabBar(
                           useToggleButtonStyle: true,
                           isScrollable: true,
@@ -149,12 +149,13 @@ class _RotinaWidgetState extends State<RotinaWidget>
                           unselectedBackgroundColor:
                               FlutterFlowTheme.of(context).alternate,
                           borderColor: FlutterFlowTheme.of(context).alternate,
-                          borderWidth: 2,
-                          borderRadius: 12,
-                          elevation: 0,
-                          labelPadding:
-                              const EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 12),
+                          borderWidth: 2.0,
+                          borderRadius: 12.0,
+                          elevation: 0.0,
+                          labelPadding: const EdgeInsetsDirectional.fromSTEB(
+                              20.0, 0.0, 20.0, 0.0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 12.0, 0.0, 12.0),
                           tabs: const [
                             Tab(
                               text: 'Mês',
@@ -174,8 +175,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                           controller: _model.tabBarController,
                           children: [
                             Container(
-                              width: 100,
-                              height: 100,
+                              width: 100.0,
+                              height: 100.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -192,11 +193,11 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                             .secondaryBackground,
                                         boxShadow: const [
                                           BoxShadow(
-                                            blurRadius: 3,
+                                            blurRadius: 3.0,
                                             color: Color(0x33000000),
                                             offset: Offset(
-                                              0,
-                                              1,
+                                              0.0,
+                                              1.0,
                                             ),
                                           )
                                         ],
@@ -299,7 +300,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  16, 12, 0, 0),
+                                                  16.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             'Se Aproximando...',
                                             style: FlutterFlowTheme.of(context)
@@ -322,7 +323,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 12, 0, 0),
+                                                  0.0, 12.0, 0.0, 0.0),
                                           child: FutureBuilder<List<AgendaRow>>(
                                             future: AgendaTable().queryRows(
                                               queryFn: (q) => q.order('date'),
@@ -332,8 +333,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                               if (!snapshot.hasData) {
                                                 return Center(
                                                   child: SizedBox(
-                                                    width: 50,
-                                                    height: 50,
+                                                    width: 50.0,
+                                                    height: 50.0,
                                                     child:
                                                         CircularProgressIndicator(
                                                       valueColor:
@@ -366,28 +367,28 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                16, 0, 16, 12),
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 12.0),
                                                     child: Container(
-                                                      width: 100,
+                                                      width: 100.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         boxShadow: const [
                                                           BoxShadow(
-                                                            blurRadius: 3,
+                                                            blurRadius: 3.0,
                                                             color: Color(
                                                                 0x33000000),
                                                             offset: Offset(
-                                                              0,
-                                                              1,
+                                                              0.0,
+                                                              1.0,
                                                             ),
                                                           )
                                                         ],
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(8),
+                                                                .circular(8.0),
                                                         border: Border.all(
                                                           color: FlutterFlowTheme
                                                                   .of(context)
@@ -396,7 +397,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets.all(8),
+                                                            const EdgeInsets.all(8.0),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -418,10 +419,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 Padding(
                                                                   padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          4,
-                                                                          0,
-                                                                          0,
-                                                                          0),
+                                                                          4.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
                                                                   child: Text(
                                                                     valueOrDefault<
                                                                         String>(
@@ -445,10 +446,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 Padding(
                                                                   padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0,
-                                                                          4,
-                                                                          0,
-                                                                          0),
+                                                                          0.0,
+                                                                          4.0,
+                                                                          0.0,
+                                                                          0.0),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -456,10 +457,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                     children: [
                                                                       Padding(
                                                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0,
-                                                                            0,
-                                                                            8,
-                                                                            0),
+                                                                            0.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
                                                                         child:
                                                                             Card(
                                                                           clipBehavior:
@@ -467,19 +468,19 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                           color:
                                                                               FlutterFlowTheme.of(context).accent3,
                                                                           elevation:
-                                                                              0,
+                                                                              0.0,
                                                                           shape:
                                                                               RoundedRectangleBorder(
                                                                             borderRadius:
-                                                                                BorderRadius.circular(8),
+                                                                                BorderRadius.circular(8.0),
                                                                           ),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                8,
-                                                                                4,
-                                                                                8,
-                                                                                4),
+                                                                                8.0,
+                                                                                4.0,
+                                                                                8.0,
+                                                                                4.0),
                                                                             child:
                                                                                 Text(
                                                                               valueOrDefault<String>(
@@ -522,8 +523,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                               ],
                                                             ),
                                                             Container(
-                                                              width: 50,
-                                                              height: 50,
+                                                              width: 50.0,
+                                                              height: 50.0,
                                                               decoration:
                                                                   BoxDecoration(
                                                                 color: FlutterFlowTheme.of(
@@ -532,7 +533,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            8),
+                                                                            8.0),
                                                                 shape: BoxShape
                                                                     .rectangle,
                                                                 border:
@@ -540,19 +541,19 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .anxiety,
-                                                                  width: 1,
+                                                                  width: 1.0,
                                                                 ),
                                                               ),
                                                               alignment:
                                                                   const AlignmentDirectional(
-                                                                      0, 0),
+                                                                      0.0, 0.0),
                                                               child: Icon(
                                                                 Icons
                                                                     .medical_services,
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryText,
-                                                                size: 24,
+                                                                size: 24.0,
                                                               ),
                                                             ),
                                                           ],
@@ -572,8 +573,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                               ),
                             ),
                             Container(
-                              width: 100,
-                              height: 100,
+                              width: 100.0,
+                              height: 100.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .primaryBackground,
@@ -590,11 +591,11 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                             .secondaryBackground,
                                         boxShadow: const [
                                           BoxShadow(
-                                            blurRadius: 3,
+                                            blurRadius: 3.0,
                                             color: Color(0x33000000),
                                             offset: Offset(
-                                              0,
-                                              1,
+                                              0.0,
+                                              1.0,
                                             ),
                                           )
                                         ],
@@ -697,7 +698,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  16, 12, 0, 0),
+                                                  16.0, 12.0, 0.0, 0.0),
                                           child: Text(
                                             'Se Aproximando...',
                                             style: FlutterFlowTheme.of(context)
@@ -720,7 +721,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0, 12, 0, 0),
+                                                  0.0, 12.0, 0.0, 0.0),
                                           child: FutureBuilder<List<AgendaRow>>(
                                             future: AgendaTable().queryRows(
                                               queryFn: (q) => q.order('date'),
@@ -730,8 +731,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                               if (!snapshot.hasData) {
                                                 return Center(
                                                   child: SizedBox(
-                                                    width: 50,
-                                                    height: 50,
+                                                    width: 50.0,
+                                                    height: 50.0,
                                                     child:
                                                         CircularProgressIndicator(
                                                       valueColor:
@@ -764,32 +765,32 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                16, 0, 16, 12),
+                                                            .fromSTEB(16.0, 0.0,
+                                                                16.0, 12.0),
                                                     child: Container(
-                                                      width: 100,
+                                                      width: 100.0,
                                                       decoration: BoxDecoration(
                                                         color: FlutterFlowTheme
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         boxShadow: const [
                                                           BoxShadow(
-                                                            blurRadius: 3,
+                                                            blurRadius: 3.0,
                                                             color: Color(
                                                                 0x33000000),
                                                             offset: Offset(
-                                                              0,
-                                                              1,
+                                                              0.0,
+                                                              1.0,
                                                             ),
                                                           )
                                                         ],
                                                         borderRadius:
                                                             BorderRadius
-                                                                .circular(8),
+                                                                .circular(8.0),
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsets.all(8),
+                                                            const EdgeInsets.all(8.0),
                                                         child: Row(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -811,10 +812,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 Padding(
                                                                   padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          4,
-                                                                          0,
-                                                                          0,
-                                                                          0),
+                                                                          4.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
                                                                   child: Text(
                                                                     valueOrDefault<
                                                                         String>(
@@ -838,10 +839,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 Padding(
                                                                   padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          0,
-                                                                          4,
-                                                                          0,
-                                                                          0),
+                                                                          0.0,
+                                                                          4.0,
+                                                                          0.0,
+                                                                          0.0),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -849,10 +850,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                     children: [
                                                                       Padding(
                                                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0,
-                                                                            0,
-                                                                            8,
-                                                                            0),
+                                                                            0.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
                                                                         child:
                                                                             Card(
                                                                           clipBehavior:
@@ -860,19 +861,19 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                           color:
                                                                               FlutterFlowTheme.of(context).accent3,
                                                                           elevation:
-                                                                              0,
+                                                                              0.0,
                                                                           shape:
                                                                               RoundedRectangleBorder(
                                                                             borderRadius:
-                                                                                BorderRadius.circular(8),
+                                                                                BorderRadius.circular(8.0),
                                                                           ),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                8,
-                                                                                4,
-                                                                                8,
-                                                                                4),
+                                                                                8.0,
+                                                                                4.0,
+                                                                                8.0,
+                                                                                4.0),
                                                                             child:
                                                                                 Text(
                                                                               valueOrDefault<String>(
@@ -915,8 +916,8 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                               ],
                                                             ),
                                                             Container(
-                                                              width: 50,
-                                                              height: 50,
+                                                              width: 50.0,
+                                                              height: 50.0,
                                                               decoration:
                                                                   BoxDecoration(
                                                                 color: FlutterFlowTheme.of(
@@ -925,7 +926,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            8),
+                                                                            8.0),
                                                                 shape: BoxShape
                                                                     .rectangle,
                                                                 border:
@@ -933,19 +934,19 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .alternate,
-                                                                  width: 1,
+                                                                  width: 1.0,
                                                                 ),
                                                               ),
                                                               alignment:
                                                                   const AlignmentDirectional(
-                                                                      0, 0),
+                                                                      0.0, 0.0),
                                                               child: Icon(
                                                                 Icons
                                                                     .medical_services,
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryText,
-                                                                size: 24,
+                                                                size: 24.0,
                                                               ),
                                                             ),
                                                           ],

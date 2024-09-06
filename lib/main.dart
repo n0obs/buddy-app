@@ -151,11 +151,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home_outlined,
-              size: 20,
+              size: 20.0,
             ),
             activeIcon: Icon(
               Icons.home,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Menu',
             tooltip: '',
@@ -163,11 +163,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.robot,
-              size: 20,
+              size: 20.0,
             ),
             activeIcon: FaIcon(
               FontAwesomeIcons.robot,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Buddy',
             tooltip: '',
@@ -175,11 +175,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.emoji_people,
-              size: 20,
+              size: 20.0,
             ),
             activeIcon: Icon(
               Icons.emoji_people,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Saúde',
             tooltip: '',
@@ -187,11 +187,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.calendar_month,
-              size: 20,
+              size: 20.0,
             ),
             activeIcon: Icon(
               Icons.calendar_month,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Rotina',
             tooltip: '',
@@ -199,11 +199,11 @@ class _NavBarPageState extends State<NavBarPage> {
           BottomNavigationBarItem(
             icon: FaIcon(
               FontAwesomeIcons.solidNewspaper,
-              size: 20,
+              size: 20.0,
             ),
             activeIcon: FaIcon(
               FontAwesomeIcons.solidNewspaper,
-              size: 24,
+              size: 24.0,
             ),
             label: 'Guia',
             tooltip: '',

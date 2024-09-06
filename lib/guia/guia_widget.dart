@@ -56,9 +56,9 @@ class _GuiaWidgetState extends State<GuiaWidget> {
           ),
           actions: [
             Align(
-              alignment: const AlignmentDirectional(0, 0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 32, 0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 32.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -70,19 +70,19 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                   child: Icon(
                     Icons.chevron_left_outlined,
                     color: FlutterFlowTheme.of(context).tertiary,
-                    size: 28,
+                    size: 28.0,
                   ),
                 ),
               ),
             ),
           ],
           centerTitle: false,
-          elevation: 0,
+          elevation: 0.0,
         ),
         body: Stack(
           children: [
             SizedBox(
-              width: MediaQuery.sizeOf(context).width,
+              width: MediaQuery.sizeOf(context).width * 1.0,
               child: Stack(
                 children: [
                   SingleChildScrollView(
@@ -90,7 +90,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 0.0, 16.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -112,7 +113,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 12.0, 0.0, 0.0),
                           child: FutureBuilder<List<GuiaRow>>(
                             future: GuiaTable().queryRows(
                               queryFn: (q) => q.order('created_at'),
@@ -122,8 +124,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                               if (!snapshot.hasData) {
                                 return Center(
                                   child: SizedBox(
-                                    width: 50,
-                                    height: 50,
+                                    width: 50.0,
+                                    height: 50.0,
                                     child: CircularProgressIndicator(
                                       valueColor: AlwaysStoppedAnimation<Color>(
                                         FlutterFlowTheme.of(context).primary,
@@ -146,38 +148,39 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                       listViewGuiaRowList[listViewIndex];
                                   return Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        16, 0, 16, 8),
+                                        16.0, 0.0, 16.0, 8.0),
                                     child: Container(
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
                                         boxShadow: const [
                                           BoxShadow(
-                                            blurRadius: 3,
+                                            blurRadius: 3.0,
                                             color: Color(0x411D2429),
                                             offset: Offset(
                                               0.0,
-                                              1,
+                                              1.0,
                                             ),
                                           )
                                         ],
-                                        borderRadius: BorderRadius.circular(8),
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
                                         border: Border.all(
                                           color: FlutterFlowTheme.of(context)
                                               .anxiety,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: const EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
                                               padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(0, 1, 1, 1),
+                                                  .fromSTEB(0.0, 1.0, 1.0, 1.0),
                                               child: ClipRRect(
                                                 borderRadius:
-                                                    BorderRadius.circular(6),
+                                                    BorderRadius.circular(6.0),
                                                 child: CachedNetworkImage(
                                                   fadeInDuration: const Duration(
                                                       milliseconds: 500),
@@ -185,8 +188,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                                       milliseconds: 500),
                                                   imageUrl:
                                                       listViewGuiaRow.imgUrl!,
-                                                  width: 80,
-                                                  height: 80,
+                                                  width: 80.0,
+                                                  height: 80.0,
                                                   fit: BoxFit.scaleDown,
                                                 ),
                                               ),
@@ -194,7 +197,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                             Expanded(
                                               child: Padding(
                                                 padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(8, 8, 4, 0),
+                                                    .fromSTEB(
+                                                        8.0, 8.0, 4.0, 0.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -216,7 +220,7 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                                                 fontFamily: FlutterFlowTheme.of(
                                                                         context)
                                                                     .headlineSmallFamily,
-                                                                fontSize: 14,
+                                                                fontSize: 14.0,
                                                                 letterSpacing:
                                                                     0.0,
                                                                 fontWeight:
@@ -233,7 +237,10 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                                       padding:
                                                           const EdgeInsetsDirectional
                                                               .fromSTEB(
-                                                                  0, 0, 8, 0),
+                                                                  0.0,
+                                                                  0.0,
+                                                                  8.0,
+                                                                  0.0),
                                                       child: AutoSizeText(
                                                         valueOrDefault<String>(
                                                           listViewGuiaRow
@@ -253,7 +260,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                                                   fontFamily: FlutterFlowTheme.of(
                                                                           context)
                                                                       .labelMediumFamily,
-                                                                  fontSize: 10,
+                                                                  fontSize:
+                                                                      10.0,
                                                                   letterSpacing:
                                                                       0.0,
                                                                   fontWeight:
@@ -281,7 +289,8 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                               children: [
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(0, 4, 0, 0),
+                                                      .fromSTEB(
+                                                          0.0, 4.0, 0.0, 0.0),
                                                   child: InkWell(
                                                     splashColor:
                                                         Colors.transparent,
@@ -311,13 +320,14 @@ class _GuiaWidgetState extends State<GuiaWidget> {
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .blacktopurple,
-                                                      size: 24,
+                                                      size: 24.0,
                                                     ),
                                                   ),
                                                 ),
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(0, 12, 4, 8),
+                                                      .fromSTEB(
+                                                          0.0, 12.0, 4.0, 8.0),
                                                   child: Text(
                                                     valueOrDefault<String>(
                                                       listViewGuiaRow

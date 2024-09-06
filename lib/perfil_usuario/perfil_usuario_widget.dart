@@ -78,8 +78,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
             body: Center(
               child: SizedBox(
-                width: 50,
-                height: 50,
+                width: 50.0,
+                height: 50.0,
                 child: CircularProgressIndicator(
                   valueColor: AlwaysStoppedAnimation<Color>(
                     FlutterFlowTheme.of(context).primary,
@@ -105,13 +105,13 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
               automaticallyImplyLeading: false,
               leading: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
-                borderRadius: 30,
-                borderWidth: 1,
-                buttonSize: 60,
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 60.0,
                 icon: Icon(
                   Icons.arrow_back_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,
-                  size: 30,
+                  size: 30.0,
                 ),
                 onPressed: () async {
                   context.pushNamed('Menu');
@@ -128,7 +128,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
               ),
               actions: const [],
               centerTitle: false,
-              elevation: 0,
+              elevation: 0.0,
             ),
             body: SafeArea(
               top: true,
@@ -140,7 +140,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(0, 1, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 1.0, 0.0, 0.0),
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
@@ -148,25 +149,25 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                   .secondaryBackground,
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 3,
+                                  blurRadius: 3.0,
                                   color: Color(0x33000000),
                                   offset: Offset(
-                                    0,
-                                    1,
+                                    0.0,
+                                    1.0,
                                   ),
                                 )
                               ],
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(16),
+                              padding: const EdgeInsets.all(16.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Container(
-                                    width: 90,
-                                    height: 90,
+                                    width: 90.0,
+                                    height: 90.0,
                                     decoration: BoxDecoration(
                                       color:
                                           FlutterFlowTheme.of(context).accent2,
@@ -174,17 +175,18 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       border: Border.all(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.all(2),
+                                      padding: const EdgeInsets.all(2.0),
                                       child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(50),
+                                        borderRadius:
+                                            BorderRadius.circular(50.0),
                                         child: Image.asset(
                                           'assets/images/buddy_carrossel.png',
-                                          width: 60,
-                                          height: 60,
+                                          width: 60.0,
+                                          height: 60.0,
                                           fit: BoxFit.cover,
                                         ),
                                       ),
@@ -192,7 +194,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        8, 0, 8, 0),
+                                        8.0, 0.0, 8.0, 0.0),
                                     child: Container(
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
@@ -228,7 +230,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                           Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
-                                                    0, 4, 0, 0),
+                                                    0.0, 4.0, 0.0, 0.0),
                                             child: Text(
                                               currentUserEmail,
                                               style:
@@ -255,7 +257,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                   ),
                                   Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
-                                        32, 0, 0, 0),
+                                        32.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -289,71 +291,73 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                         }
                                       },
                                       child: Container(
-                                        width: 80,
-                                        height: 40,
+                                        width: 80.0,
+                                        height: 40.0,
                                         decoration: BoxDecoration(
                                           color: const Color(0xFFF1F4F8),
                                           borderRadius:
-                                              BorderRadius.circular(20),
+                                              BorderRadius.circular(20.0),
                                           border: Border.all(
                                             color: const Color(0xFFE0E3E7),
-                                            width: 1,
+                                            width: 1.0,
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(2),
+                                          padding: const EdgeInsets.all(2.0),
                                           child: Stack(
                                             alignment:
-                                                const AlignmentDirectional(0, 0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             children: [
                                               const Align(
                                                 alignment: AlignmentDirectional(
-                                                    -0.9, 0),
+                                                    -0.9, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(6, 0, 0, 0),
+                                                      .fromSTEB(
+                                                          6.0, 0.0, 0.0, 0.0),
                                                   child: Icon(
                                                     Icons.wb_sunny_rounded,
                                                     color: Color(0xFF57636C),
-                                                    size: 24,
+                                                    size: 24.0,
                                                   ),
                                                 ),
                                               ),
                                               const Align(
-                                                alignment:
-                                                    AlignmentDirectional(1, 0),
+                                                alignment: AlignmentDirectional(
+                                                    1.0, 0.0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 0, 6, 0),
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 6.0, 0.0),
                                                   child: Icon(
                                                     Icons.mode_night_rounded,
                                                     color: Color(0xFF57636C),
-                                                    size: 24,
+                                                    size: 24.0,
                                                   ),
                                                 ),
                                               ),
                                               Align(
-                                                alignment:
-                                                    const AlignmentDirectional(1, 0),
+                                                alignment: const AlignmentDirectional(
+                                                    1.0, 0.0),
                                                 child: Container(
-                                                  width: 36,
-                                                  height: 36,
+                                                  width: 36.0,
+                                                  height: 36.0,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
                                                     boxShadow: const [
                                                       BoxShadow(
-                                                        blurRadius: 4,
+                                                        blurRadius: 4.0,
                                                         color:
                                                             Color(0x430B0D0F),
                                                         offset: Offset(
                                                           0.0,
-                                                          2,
+                                                          2.0,
                                                         ),
                                                       )
                                                     ],
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            30),
+                                                            30.0),
                                                     shape: BoxShape.rectangle,
                                                   ),
                                                 ).animateOnActionTrigger(
@@ -373,7 +377,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 0.0, 0.0),
                           child: Text(
                             'Conta',
                             style: FlutterFlowTheme.of(context)
@@ -389,8 +394,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 12.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -409,28 +414,28 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                             },
                             child: Container(
                               width: double.infinity,
-                              height: 60,
+                              height: 60.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                                 boxShadow: const [
                                   BoxShadow(
-                                    blurRadius: 5,
+                                    blurRadius: 5.0,
                                     color: Color(0x3416202A),
                                     offset: Offset(
                                       0.0,
-                                      2,
+                                      2.0,
                                     ),
                                   )
                                 ],
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).anxiety,
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -438,12 +443,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       Icons.account_circle_outlined,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      size: 24,
+                                      size: 24.0,
                                     ),
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12, 0, 0, 0),
+                                            12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Edite seu Perfil',
                                           style: FlutterFlowTheme.of(context)
@@ -464,12 +469,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.9, 0),
+                                      alignment: const AlignmentDirectional(0.9, 0.0),
                                       child: Icon(
                                         Icons.arrow_forward_ios,
                                         color: FlutterFlowTheme.of(context)
                                             .blacktopurple,
-                                        size: 18,
+                                        size: 18.0,
                                       ),
                                     ),
                                   ],
@@ -479,7 +484,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 0, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 0.0, 0.0),
                           child: Text(
                             'Geral',
                             style: FlutterFlowTheme.of(context)
@@ -495,32 +501,32 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 12.0, 16.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            height: 60,
+                            height: 60.0,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 5,
+                                  blurRadius: 5.0,
                                   color: Color(0x3416202A),
                                   offset: Offset(
                                     0.0,
-                                    2,
+                                    2.0,
                                   ),
                                 )
                               ],
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.0),
                               shape: BoxShape.rectangle,
                               border: Border.all(
                                 color: FlutterFlowTheme.of(context).anxiety,
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -528,12 +534,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                     Icons.help_outline_rounded,
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
-                                    size: 24,
+                                    size: 24.0,
                                   ),
                                   Expanded(
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12, 0, 0, 0),
+                                          12.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Suporte',
                                         style: FlutterFlowTheme.of(context)
@@ -554,12 +560,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.9, 0),
+                                    alignment: const AlignmentDirectional(0.9, 0.0),
                                     child: Icon(
                                       Icons.arrow_forward_ios,
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      size: 18,
+                                      size: 18.0,
                                     ),
                                   ),
                                 ],
@@ -568,32 +574,32 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 12.0, 16.0, 0.0),
                           child: Container(
                             width: double.infinity,
-                            height: 60,
+                            height: 60.0,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
                               boxShadow: const [
                                 BoxShadow(
-                                  blurRadius: 5,
+                                  blurRadius: 5.0,
                                   color: Color(0x3416202A),
                                   offset: Offset(
                                     0.0,
-                                    2,
+                                    2.0,
                                   ),
                                 )
                               ],
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.0),
                               shape: BoxShape.rectangle,
                               border: Border.all(
                                 color: FlutterFlowTheme.of(context).anxiety,
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -601,12 +607,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                     Icons.privacy_tip_rounded,
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
-                                    size: 24,
+                                    size: 24.0,
                                   ),
                                   Expanded(
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          12, 0, 0, 0),
+                                          12.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Termo de Serviço',
                                         style: FlutterFlowTheme.of(context)
@@ -627,12 +633,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.9, 0),
+                                    alignment: const AlignmentDirectional(0.9, 0.0),
                                     child: Icon(
                                       Icons.arrow_forward_ios,
                                       color: FlutterFlowTheme.of(context)
                                           .blacktopurple,
-                                      size: 18,
+                                      size: 18.0,
                                     ),
                                   ),
                                 ],
@@ -641,8 +647,8 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                           ),
                         ),
                         Padding(
-                          padding:
-                              const EdgeInsetsDirectional.fromSTEB(16, 12, 16, 0),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              16.0, 12.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -657,28 +663,28 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                             },
                             child: Container(
                               width: double.infinity,
-                              height: 60,
+                              height: 60.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
                                 boxShadow: const [
                                   BoxShadow(
-                                    blurRadius: 5,
+                                    blurRadius: 5.0,
                                     color: Color(0x3416202A),
                                     offset: Offset(
                                       0.0,
-                                      2,
+                                      2.0,
                                     ),
                                   )
                                 ],
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(12.0),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).anxiety,
                                 ),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(8),
+                                padding: const EdgeInsets.all(8.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -687,12 +693,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       Icons.logout,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      size: 24,
+                                      size: 24.0,
                                     ),
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            12, 0, 0, 0),
+                                            12.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Sair da Conta',
                                           textAlign: TextAlign.start,
@@ -714,12 +720,12 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.9, 0),
+                                      alignment: const AlignmentDirectional(0.9, 0.0),
                                       child: Icon(
                                         Icons.arrow_forward_ios,
                                         color: FlutterFlowTheme.of(context)
                                             .blacktopurple,
-                                        size: 18,
+                                        size: 18.0,
                                       ),
                                     ),
                                   ],

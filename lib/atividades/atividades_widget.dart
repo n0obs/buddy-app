@@ -52,7 +52,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
             children: [
               Container(
                 width: double.infinity,
-                height: 230,
+                height: 230.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
                   image: DecorationImage(
@@ -63,22 +63,23 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                   ),
                 ),
                 child: Container(
-                  width: 100,
-                  height: 170,
+                  width: 100.0,
+                  height: 170.0,
                   decoration: const BoxDecoration(
                     color: Color(0x9A1D2428),
                   ),
                   child: Stack(
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(16, 64, 16, 12),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            16.0, 64.0, 16.0, 12.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 8),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 8.0),
                               child: Text(
                                 'Atividades',
                                 style: FlutterFlowTheme.of(context)
@@ -111,8 +112,8 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                   ),
                             ),
                             Padding(
-                              padding:
-                                  const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 8.0, 0.0, 0.0),
                               child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
@@ -138,45 +139,45 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .anxiety,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(40.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(40.0),
                                     ),
                                     errorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(40.0),
                                     ),
                                     focusedErrorBorder: OutlineInputBorder(
                                       borderSide: BorderSide(
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
-                                        width: 2,
+                                        width: 2.0,
                                       ),
-                                      borderRadius: BorderRadius.circular(40),
+                                      borderRadius: BorderRadius.circular(40.0),
                                     ),
                                     filled: true,
                                     fillColor: FlutterFlowTheme.of(context)
                                         .secondaryBackground,
                                     contentPadding:
                                         const EdgeInsetsDirectional.fromSTEB(
-                                            24, 24, 0, 24),
+                                            24.0, 24.0, 0.0, 24.0),
                                     prefixIcon: Icon(
                                       Icons.search_rounded,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
-                                      size: 24,
+                                      size: 24.0,
                                     ),
                                   ),
                                   style: FlutterFlowTheme.of(context)
@@ -197,6 +198,10 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                 ),
                               ),
                             ),
+                            const Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [],
+                            ),
                           ],
                         ),
                       ),
@@ -213,7 +218,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                           child: Icon(
                             Icons.chevron_left,
                             color: FlutterFlowTheme.of(context).primary,
-                            size: 36,
+                            size: 36.0,
                           ),
                         ),
                       ),
@@ -226,7 +231,8 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(16, 16, 0, 0),
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                     child: Text(
                       'Atividades Populares',
                       style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -241,12 +247,13 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0, 16, 0, 52),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 52.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: FutureBuilder<List<AtividadesRow>>(
                         future: AtividadesTable().queryRows(
                           queryFn: (q) =>
@@ -271,8 +278,8 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                               final listViewAtividadesRow =
                                   listViewAtividadesRowList[listViewIndex];
                               return Padding(
-                                padding:
-                                    const EdgeInsetsDirectional.fromSTEB(0, 12, 0, 0),
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 12.0, 0.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
@@ -305,22 +312,23 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                       ),
                                       boxShadow: const [
                                         BoxShadow(
-                                          blurRadius: 4,
+                                          blurRadius: 4.0,
                                           color: Color(0x33000000),
                                           offset: Offset(
                                             0.0,
-                                            2,
+                                            2.0,
                                           ),
                                         )
                                       ],
-                                      borderRadius: BorderRadius.circular(12),
+                                      borderRadius: BorderRadius.circular(12.0),
                                     ),
                                     child: Stack(
                                       children: [
                                         Align(
-                                          alignment: const AlignmentDirectional(0, 1),
+                                          alignment:
+                                              const AlignmentDirectional(0.0, 1.0),
                                           child: Padding(
-                                            padding: const EdgeInsets.all(2),
+                                            padding: const EdgeInsets.all(2.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -331,12 +339,12 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1, -1),
+                                                          -1.0, -1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
-                                                            .fromSTEB(
-                                                                16, 0, 0, 0),
+                                                            .fromSTEB(16.0, 0.0,
+                                                                0.0, 0.0),
                                                     child: Text(
                                                       valueOrDefault<String>(
                                                         listViewAtividadesRow
@@ -365,7 +373,8 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                                 ),
                                                 Padding(
                                                   padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(16, 16, 0, 16),
+                                                      .fromSTEB(16.0, 16.0, 0.0,
+                                                          16.0),
                                                   child: Text(
                                                     valueOrDefault<String>(
                                                       listViewAtividadesRow
@@ -402,7 +411,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                             Icons.arrow_circle_right_outlined,
                                             color: FlutterFlowTheme.of(context)
                                                 .tertiary,
-                                            size: 28,
+                                            size: 28.0,
                                           ),
                                         ),
                                       ],
