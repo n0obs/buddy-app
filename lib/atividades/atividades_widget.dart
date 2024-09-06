@@ -72,7 +72,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                     children: [
                       Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
-                            16.0, 64.0, 16.0, 12.0),
+                            16.0, 64.0, 16.0, 1.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +113,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                             ),
                             Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 8.0, 0.0, 0.0),
+                                  0.0, 6.0, 0.0, 0.0),
                               child: SizedBox(
                                 width: double.infinity,
                                 child: TextFormField(
