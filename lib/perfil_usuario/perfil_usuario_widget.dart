@@ -597,9 +597,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                                   color: Theme.of(context)
                                                               .brightness ==
                                                           Brightness.light
-                                                      ? FlutterFlowTheme.of(
-                                                              context)
-                                                          .cinzachat
+                                                      ? const Color(0xFFABE9E3)
                                                       : FlutterFlowTheme.of(
                                                               context)
                                                           .alternate,
@@ -702,9 +700,7 @@ class _PerfilUsuarioWidgetState extends State<PerfilUsuarioWidget>
                                                   color: Theme.of(context)
                                                               .brightness ==
                                                           Brightness.dark
-                                                      ? FlutterFlowTheme.of(
-                                                              context)
-                                                          .customColor1
+                                                      ? const Color(0xFF04584F)
                                                       : FlutterFlowTheme.of(
                                                               context)
                                                           .alternate,
