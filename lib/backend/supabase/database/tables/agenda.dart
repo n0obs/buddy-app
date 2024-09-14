@@ -25,4 +25,7 @@ class AgendaRow extends SupabaseDataRow {
 
   DateTime? get date => getField<DateTime>('date');
   set date(DateTime? value) => setField<DateTime>('date', value);
+
+  PostgresTime? get time => getField<PostgresTime>('time');
+  set time(PostgresTime? value) => setField<PostgresTime>('time', value);
 }

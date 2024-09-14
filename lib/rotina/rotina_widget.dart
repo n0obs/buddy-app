@@ -326,7 +326,12 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: FutureBuilder<List<AgendaRow>>(
                                             future: AgendaTable().queryRows(
-                                              queryFn: (q) => q.order('date'),
+                                              queryFn: (q) => q.eq(
+                                                'date',
+                                                supaSerialize<DateTime>(_model
+                                                    .calendarSelectedDay1
+                                                    ?.start),
+                                              ),
                                             ),
                                             builder: (context, snapshot) {
                                               // Customize what your widget looks like when it's loading.
@@ -483,13 +488,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                                 4.0),
                                                                             child:
                                                                                 Text(
-                                                                              valueOrDefault<String>(
-                                                                                dateTimeFormat(
-                                                                                  "jm",
-                                                                                  listViewAgendaRow.date,
-                                                                                  locale: FFLocalizations.of(context).languageCode,
-                                                                                ),
-                                                                                '0:00am',
+                                                                              dateTimeFormat(
+                                                                                "jm",
+                                                                                listViewAgendaRow.time!.time,
+                                                                                locale: FFLocalizations.of(context).languageCode,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
@@ -503,7 +505,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                       ),
                                                                       Text(
                                                                         dateTimeFormat(
-                                                                          "EEEE d/M/y",
+                                                                          "yMd",
                                                                           listViewAgendaRow
                                                                               .date!,
                                                                           locale:
@@ -724,7 +726,12 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                   0.0, 12.0, 0.0, 0.0),
                                           child: FutureBuilder<List<AgendaRow>>(
                                             future: AgendaTable().queryRows(
-                                              queryFn: (q) => q.order('date'),
+                                              queryFn: (q) => q.eq(
+                                                'date',
+                                                supaSerialize<DateTime>(_model
+                                                    .calendarSelectedDay2
+                                                    ?.start),
+                                              ),
                                             ),
                                             builder: (context, snapshot) {
                                               // Customize what your widget looks like when it's loading.
@@ -876,13 +883,10 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                                 4.0),
                                                                             child:
                                                                                 Text(
-                                                                              valueOrDefault<String>(
-                                                                                dateTimeFormat(
-                                                                                  "jm",
-                                                                                  listViewAgendaRow.date,
-                                                                                  locale: FFLocalizations.of(context).languageCode,
-                                                                                ),
-                                                                                '0:00am',
+                                                                              dateTimeFormat(
+                                                                                "jm",
+                                                                                listViewAgendaRow.time!.time,
+                                                                                locale: FFLocalizations.of(context).languageCode,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: FlutterFlowTheme.of(context).bodyMediumFamily,
@@ -896,7 +900,7 @@ class _RotinaWidgetState extends State<RotinaWidget>
                                                                       ),
                                                                       Text(
                                                                         dateTimeFormat(
-                                                                          "EEEE d/M/y",
+                                                                          "yMd",
                                                                           listViewAgendaRow
                                                                               .date!,
                                                                           locale:
