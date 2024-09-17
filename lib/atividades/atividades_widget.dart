@@ -301,7 +301,7 @@ class _AtividadesWidgetState extends State<AtividadesWidget> {
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
                                       image: DecorationImage(
-                                        fit: BoxFit.fill,
+                                        fit: BoxFit.scaleDown,
                                         image: CachedNetworkImageProvider(
                                           listViewAtividadesRow.imgUrl!,
                                         ),
