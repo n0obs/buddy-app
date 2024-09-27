@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'chat_model.dart';
 export 'chat_model.dart';
@@ -28,6 +29,16 @@ class _ChatWidgetState extends State<ChatWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => ChatModel());
+
+    // On component load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      _model.addToHistoricoConversa(ChatHistoryStruct(
+        role: 'system',
+        content:
+            'Você é um cuidador de idosos, especialista em saúde e bem-estar na terceira idade. Você estudou por muitos anos geriatria e é expert em assuntos relacionados à saúde física e mental dos idosos, incluindo nutrição, exercícios, prevenção de doenças e socialização. Você já trabalhou em lares de idosos e centros de convivência, promovendo atividades para melhorar a qualidade de vida e a interação social entre os mais velhos. Você apenas responde sobre questões de saúde e bem-estar dos idosos, especialmente no que se refere a promover a independência e uma vida ativa. Se te fizerem uma pergunta não relacionada a esses temas, você dirá: \"Desculpe, como assistente de saúde para idosos, só posso responder sobre temas relacionados à saúde e bem-estar na terceira idade\". Sua linguagem é amigável e acolhedora, sempre trazendo dicas práticas e fáceis de entender. Você também adora contar histórias e fazer piadas para deixar os idosos à vontade e incentivá-los a participar ativamente. Todo mundo te adora e te vê como uma companhia valiosa.',
+      ));
+      safeSetState(() {});
+    });
 
     _model.facaPerguntaFieldTextController ??= TextEditingController();
     _model.facaPerguntaFieldFocusNode ??= FocusNode();
@@ -367,11 +378,6 @@ class _ChatWidgetState extends State<ChatWidget> {
                   FFButtonWidget(
                     onPressed: () async {
                       var shouldSetState = false;
-                      _model.addToHistoricoConversa(ChatHistoryStruct(
-                        role: 'system',
-                        content: 'Você é um excelente ajudante',
-                      ));
-                      safeSetState(() {});
                       _model.addToHistoricoConversa(ChatHistoryStruct(
                         role: 'user',
                         content: _model.facaPerguntaFieldTextController.text,

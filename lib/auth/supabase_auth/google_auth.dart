@@ -12,6 +12,7 @@ Future<User?> googleSignInFunc() async {
   }
 
   final googleSignIn = GoogleSignIn(
+    scopes: ['profile', 'email'],
     clientId: isAndroid
         ? null
         : "901428067370-0gnbd5ir32mvfjlvarsu3avi1f4f2p1h.apps.googleusercontent.com",
