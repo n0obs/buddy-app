@@ -15,13 +15,19 @@ class ChatGPTCall {
         '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',
     String? pergunta = '',
     dynamic historicoConversaJson,
+    List<Map<String, dynamic>>? functions,
   }) async {
     final historicoConversa = _serializeJson(historicoConversaJson, true);
-    final ffApiRequestBody = '''
-{
-  "model": "gpt-4o-mini",
-  "messages": $historicoConversa
-}''';
+    final ffApiRequestBody = {
+      "model": "gpt-4o-mini",
+      "messages": json.decode(historicoConversa),
+    };
+
+    if (functions != null && functions.isNotEmpty) {
+      ffApiRequestBody["functions"] = functions;
+      ffApiRequestBody["function_call"] = "auto";
+    }
+
     return ApiManager.instance.makeApiCall(
       callName: 'ChatGPT',
       apiUrl: 'https://api.openai.com/v1/chat/completions',
@@ -32,7 +38,7 @@ class ChatGPTCall {
         'Content-Type': 'Application/json',
       },
       params: {},
-      body: ffApiRequestBody,
+      body: json.encode(ffApiRequestBody),
       bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
@@ -54,6 +60,11 @@ class ChatGPTCall {
   static String? modelo(dynamic response) => castToType<String>(getJsonField(
         response,
         r'''$.model''',
+      ));
+  static Map<String, dynamic>? functionCall(dynamic response) => 
+      castToType<Map<String, dynamic>>(getJsonField(
+        response,
+        r'''$.choices[:].message.function_call''',
       ));
 }
 
