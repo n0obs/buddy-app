@@ -1,15 +1,17 @@
-import '/backend/api_requests/api_calls.dart';
-import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/backend/supabase/supabase.dart';
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:convert';
-import 'dart:developer' as developer;
+
+import '/backend/api_requests/api_calls.dart';
+import '/backend/schema/structs/index.dart';
+import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'chat_model.dart';
+
 export 'chat_model.dart';
 
 class ChatWidget extends StatefulWidget {
@@ -71,7 +73,247 @@ class _ChatWidgetState extends State<ChatWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          // ... (rest of the UI code remains unchanged)
+          Container(
+            width: MediaQuery.sizeOf(context).width * 1.0,
+            height: 150.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).primaryBackground,
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  child: Container(
+                    width: 50.0,
+                    height: 50.0,
+                    clipBehavior: Clip.antiAlias,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                    ),
+                    child: Image.asset(
+                      'assets/images/buddy_carrossel.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        16.0, 0.0, 0.0, 0.0),
+                    child: Container(
+                      width: 100.0,
+                      height: 100.0,
+                      decoration: const BoxDecoration(),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Sou o Buddy!',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineLarge
+                                .override(
+                                  fontFamily: 'Sora',
+                                  color: FlutterFlowTheme.of(context).secondary,
+                                  fontSize: 22.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Sora'),
+                                ),
+                          ),
+                          Text(
+                            'Vamos conversar!',
+                            style: FlutterFlowTheme.of(context)
+                                .headlineSmall
+                                .override(
+                                  fontFamily: 'Sora',
+                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  fontSize: 16.0,
+                                  letterSpacing: 0.0,
+                                  useGoogleFonts:
+                                      GoogleFonts.asMap().containsKey('Sora'),
+                                ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      16.0, 0.0, 16.0, 0.0),
+                  child: Container(
+                    width: 50.0,
+                    height: 50.0,
+                    decoration: const BoxDecoration(),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.close_outlined,
+                        color: FlutterFlowTheme.of(context).tertiary,
+                        size: 35.0,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: Container(
+              width: MediaQuery.sizeOf(context).width * 1.0,
+              height: 100.0,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).primaryBackground,
+              ),
+              child: Builder(
+                builder: (context) {
+                  final historicoConversaChat =
+                      _model.historicoConversa.toList();
+
+                  return ListView.builder(
+                    padding: EdgeInsets.zero,
+                    scrollDirection: Axis.vertical,
+                    itemCount: historicoConversaChat.length,
+                    itemBuilder: (context, historicoConversaChatIndex) {
+                      final historicoConversaChatItem =
+                          historicoConversaChat[historicoConversaChatIndex];
+                      return Container(
+                        width: 100.0,
+                        decoration: const BoxDecoration(),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            if (historicoConversaChatItem.role == 'assistant')
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 0.0, 16.0, 0.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width: 50.0,
+                                      height: 50.0,
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .alternate,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Container(
+                                        clipBehavior: Clip.antiAlias,
+                                        decoration: const BoxDecoration(
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Image.asset(
+                                          'assets/images/AI.png',
+                                          fit: BoxFit.scaleDown,
+                                        ),
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                        child: Text(
+                                          historicoConversaChatItem.content,
+                                          textAlign: TextAlign.start,
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily,
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
+                                              ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            if (historicoConversaChatItem.role == 'user')
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 8.0, 0.0, 8.0),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              16.0, 0.0, 16.0, 0.0),
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .tertiary,
+                                          borderRadius:
+                                              BorderRadius.circular(12.0),
+                                        ),
+                                        child: Align(
+                                          alignment: const AlignmentDirectional(
+                                              -1.0, 0.0),
+                                          child: Padding(
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(8.0, 8.0, 8.0, 8.0),
+                                            child: Text(
+                                              historicoConversaChatItem.content,
+                                              textAlign: TextAlign.end,
+                                              style:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMediumFamily,
+                                                        letterSpacing: 0.0,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMediumFamily),
+                                                      ),
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                          ],
+                        ),
+                      );
+                    },
+                  );
+                },
+              ),
+            ),
+          ),
           Container(
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: 100.0,
@@ -86,15 +328,16 @@ class _ChatWidgetState extends State<ChatWidget> {
             ),
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Expanded(
                     child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 8.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          16.0, 0.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.facaPerguntaFieldTextController,
                         focusNode: _model.facaPerguntaFieldFocusNode,
@@ -157,7 +400,8 @@ class _ChatWidgetState extends State<ChatWidget> {
                         functions: [
                           {
                             "name": "schedule_event",
-                            "description": "Schedule an event in the user's agenda",
+                            "description":
+                                "Schedule an event in the user's agenda",
                             "parameters": {
                               "type": "object",
                               "properties": {
@@ -167,11 +411,13 @@ class _ChatWidgetState extends State<ChatWidget> {
                                 },
                                 "start_time": {
                                   "type": "string",
-                                  "description": "The start time of the event in ISO 8601 format"
+                                  "description":
+                                      "The start time of the event in ISO 8601 format"
                                 },
                                 "end_time": {
                                   "type": "string",
-                                  "description": "The end time of the event in ISO 8601 format"
+                                  "description":
+                                      "The end time of the event in ISO 8601 format"
                                 },
                                 "description": {
                                   "type": "string",
@@ -201,18 +447,22 @@ class _ChatWidgetState extends State<ChatWidget> {
                           (_model.apiResultGPT?.jsonBody ?? ''),
                         );
 
-                        developer.log('API Response: ${_model.apiResultGPT?.jsonBody}');
+                        developer.log(
+                            'API Response: ${_model.apiResultGPT?.jsonBody}');
                         developer.log('Function Call: $functionCall');
 
-                        if (functionCall != null && functionCall['name'] == 'schedule_event') {
-                          final eventData = jsonDecode(functionCall['arguments']);
-                          
+                        if (functionCall != null &&
+                            functionCall['name'] == 'schedule_event') {
+                          final eventData =
+                              jsonDecode(functionCall['arguments']);
+
                           developer.log('Event Data: $eventData');
 
                           try {
                             await SupaFlow.insertAgendaEvent(
                               title: eventData['title'],
-                              startTime: DateTime.parse(eventData['start_time']),
+                              startTime:
+                                  DateTime.parse(eventData['start_time']),
                               endTime: DateTime.parse(eventData['end_time']),
                               description: eventData['description'],
                               userId: widget.userId,
@@ -226,21 +476,23 @@ class _ChatWidgetState extends State<ChatWidget> {
                             developer.log('Error inserting event: $e');
                             _model.addToHistoricoConversa(ChatHistoryStruct(
                               role: 'assistant',
-                              content: 'Desculpe, ocorreu um erro ao agendar o evento. Por favor, tente novamente.',
+                              content:
+                                  'Desculpe, ocorreu um erro ao agendar o evento. Por favor, tente novamente.',
                             ));
                           }
                         }
 
                         safeSetState(() {});
                       } else {
-                        developer.log('API Error: ${_model.apiResultGPT?.statusCode} - ${_model.apiResultGPT?.bodyText}');
+                        developer.log(
+                            'API Error: ${_model.apiResultGPT?.statusCode} - ${_model.apiResultGPT?.bodyText}');
                         await showDialog(
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
                               title: const Text('Erro!'),
-                              content:
-                                  Text('Código: ${_model.apiResultGPT?.statusCode}\n${_model.apiResultGPT?.bodyText ?? ''}'),
+                              content: Text(
+                                  'Código: ${_model.apiResultGPT?.statusCode}\n${_model.apiResultGPT?.bodyText ?? ''}'),
                               actions: [
                                 TextButton(
                                   onPressed: () =>
@@ -266,10 +518,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                     options: FFButtonOptions(
                       width: 50.0,
                       height: 50.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          12.0, 0.0, 0.0, 0.0),
+                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
