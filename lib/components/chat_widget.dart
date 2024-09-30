@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
-import 'dart:developer' as developer;
 import 'chat_model.dart';
 export 'chat_model.dart';
 
@@ -201,46 +200,32 @@ class _ChatWidgetState extends State<ChatWidget> {
                           (_model.apiResultGPT?.jsonBody ?? ''),
                         );
 
-                        developer.log('API Response: ${_model.apiResultGPT?.jsonBody}');
-                        developer.log('Function Call: $functionCall');
-
                         if (functionCall != null && functionCall['name'] == 'schedule_event') {
                           final eventData = jsonDecode(functionCall['arguments']);
                           
-                          developer.log('Event Data: $eventData');
+                          await SupaFlow.insertAgendaEvent(
+                            title: eventData['title'],
+                            startTime: DateTime.parse(eventData['start_time']),
+                            endTime: DateTime.parse(eventData['end_time']),
+                            description: eventData['description'],
+                            userId: widget.userId,
+                          );
 
-                          try {
-                            await SupaFlow.insertAgendaEvent(
-                              title: eventData['title'],
-                              startTime: DateTime.parse(eventData['start_time']),
-                              endTime: DateTime.parse(eventData['end_time']),
-                              description: eventData['description'],
-                              userId: widget.userId,
-                            );
-
-                            _model.addToHistoricoConversa(ChatHistoryStruct(
-                              role: 'assistant',
-                              content: 'Evento agendado com sucesso!',
-                            ));
-                          } catch (e) {
-                            developer.log('Error inserting event: $e');
-                            _model.addToHistoricoConversa(ChatHistoryStruct(
-                              role: 'assistant',
-                              content: 'Desculpe, ocorreu um erro ao agendar o evento. Por favor, tente novamente.',
-                            ));
-                          }
+                          _model.addToHistoricoConversa(ChatHistoryStruct(
+                            role: 'assistant',
+                            content: 'Evento agendado com sucesso!',
+                          ));
                         }
 
                         safeSetState(() {});
                       } else {
-                        developer.log('API Error: ${_model.apiResultGPT?.statusCode} - ${_model.apiResultGPT?.bodyText}');
                         await showDialog(
                           context: context,
                           builder: (alertDialogContext) {
                             return AlertDialog(
                               title: const Text('Erro!'),
                               content:
-                                  Text('Código: ${_model.apiResultGPT?.statusCode}\n${_model.apiResultGPT?.bodyText ?? ''}'),
+                                  Text((_model.apiResultGPT?.bodyText ?? '')),
                               actions: [
                                 TextButton(
                                   onPressed: () =>
