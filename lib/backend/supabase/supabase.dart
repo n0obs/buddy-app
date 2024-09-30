@@ -33,7 +33,6 @@ class SupaFlow {
       'start_time': startTime.toIso8601String(),
       'end_time': endTime.toIso8601String(),
       'description': description,
-      'user_id': userId,
     });
   }
 }
