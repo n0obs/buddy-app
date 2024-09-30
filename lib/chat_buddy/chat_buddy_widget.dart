@@ -203,7 +203,7 @@ class _ChatBuddyWidgetState extends State<ChatBuddyWidget> {
                                         FocusScope.of(context).unfocus(),
                                     child: Padding(
                                       padding: MediaQuery.viewInsetsOf(context),
-                                      child: const ChatWidget(),
+                                      child: ChatWidget(userId: currentUserUid),
                                     ),
                                   );
                                 },

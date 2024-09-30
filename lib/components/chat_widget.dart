@@ -406,7 +406,7 @@ class _ChatWidgetState extends State<ChatWidget> {
                           content: response,
                         ));
 
-                        if (response.startsWith('AGENDAR:')) {
+                        if (response!.startsWith('AGENDAR:')) {
                           final eventJson = response.substring(8).trim();
                           final eventData = jsonDecode(eventJson);
                           
