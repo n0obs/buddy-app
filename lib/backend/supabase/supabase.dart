@@ -20,4 +20,20 @@ class SupaFlow {
         anonKey: _kSupabaseAnonKey,
         debug: false,
       );
+
+  static Future<void> insertAgendaEvent({
+    required String title,
+    required DateTime startTime,
+    required DateTime endTime,
+    String? description,
+    required String userId,
+  }) async {
+    await client.from('agenda').insert({
+      'title': title,
+      'start_time': startTime.toIso8601String(),
+      'end_time': endTime.toIso8601String(),
+      'description': description,
+      'user_id': userId,
+    });
+  }
 }

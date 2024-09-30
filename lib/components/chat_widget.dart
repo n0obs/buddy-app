@@ -3,14 +3,18 @@ import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/backend/supabase/supabase.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:convert';
 import 'chat_model.dart';
 export 'chat_model.dart';
 
 class ChatWidget extends StatefulWidget {
-  const ChatWidget({super.key});
+  final String userId;
+
+  const ChatWidget({super.key, required this.userId});
 
   @override
   State<ChatWidget> createState() => _ChatWidgetState();
@@ -35,7 +39,7 @@ class _ChatWidgetState extends State<ChatWidget> {
       _model.addToHistoricoConversa(ChatHistoryStruct(
         role: 'system',
         content:
-            'Você é um cuidador de idosos, especialista em saúde e bem-estar na terceira idade. Você estudou por muitos anos geriatria e é expert em assuntos relacionados à saúde física e mental dos idosos, incluindo nutrição, exercícios, prevenção de doenças e socialização. Você já trabalhou em lares de idosos e centros de convivência, promovendo atividades para melhorar a qualidade de vida e a interação social entre os mais velhos. Você apenas responde sobre questões de saúde e bem-estar dos idosos, especialmente no que se refere a promover a independência e uma vida ativa. Se te fizerem uma pergunta não relacionada a esses temas, você dirá: \"Desculpe, como assistente de saúde para idosos, só posso responder sobre temas relacionados à saúde e bem-estar na terceira idade\". Sua linguagem é amigável e acolhedora, sempre trazendo dicas práticas e fáceis de entender. Você também adora contar histórias e fazer piadas para deixar os idosos à vontade e incentivá-los a participar ativamente. Todo mundo te adora e te vê como uma companhia valiosa.',
+            'Você é um cuidador de idosos, especialista em saúde e bem-estar na terceira idade. Você estudou por muitos anos geriatria e é expert em assuntos relacionados à saúde física e mental dos idosos, incluindo nutrição, exercícios, prevenção de doenças e socialização. Você já trabalhou em lares de idosos e centros de convivência, promovendo atividades para melhorar a qualidade de vida e a interação social entre os mais velhos. Você apenas responde sobre questões de saúde e bem-estar dos idosos, especialmente no que se refere a promover a independência e uma vida ativa. Se te fizerem uma pergunta não relacionada a esses temas, você dirá: \"Desculpe, como assistente de saúde para idosos, só posso responder sobre temas relacionados à saúde e bem-estar na terceira idade\". Sua linguagem é amigável e acolhedora, sempre trazendo dicas práticas e fáceis de entender. Você também adora contar histórias e fazer piadas para deixar os idosos à vontade e incentivá-los a participar ativamente. Todo mundo te adora e te vê como uma companhia valiosa. Além disso, você pode ajudar a agendar eventos. Quando o usuário quiser agendar algo, responda com o prefixo "AGENDAR:" seguido dos detalhes do evento no formato JSON, por exemplo: AGENDAR: {"title": "Consulta médica", "start_time": "2023-07-01T10:00:00", "end_time": "2023-07-01T11:00:00", "description": "Consulta de rotina com Dr. Silva"}',
       ));
       safeSetState(() {});
     });
@@ -394,12 +398,32 @@ class _ChatWidgetState extends State<ChatWidget> {
                         safeSetState(() {
                           _model.facaPerguntaFieldTextController?.clear();
                         });
+                        final response = ChatGPTCall.resposta(
+                          (_model.apiResultGPT?.jsonBody ?? ''),
+                        );
                         _model.addToHistoricoConversa(ChatHistoryStruct(
                           role: 'assistant',
-                          content: ChatGPTCall.resposta(
-                            (_model.apiResultGPT?.jsonBody ?? ''),
-                          ),
+                          content: response,
                         ));
+
+                        if (response.startsWith('AGENDAR:')) {
+                          final eventJson = response.substring(8).trim();
+                          final eventData = jsonDecode(eventJson);
+                          
+                          await SupaFlow.insertAgendaEvent(
+                            title: eventData['title'],
+                            startTime: DateTime.parse(eventData['start_time']),
+                            endTime: DateTime.parse(eventData['end_time']),
+                            description: eventData['description'],
+                            userId: widget.userId,
+                          );
+
+                          _model.addToHistoricoConversa(ChatHistoryStruct(
+                            role: 'assistant',
+                            content: 'Evento agendado com sucesso!',
+                          ));
+                        }
+
                         safeSetState(() {});
                       } else {
                         await showDialog(
